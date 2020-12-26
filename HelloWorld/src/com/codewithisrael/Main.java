@@ -8,14 +8,23 @@ public class Main { // this is a Class with the name of Main - also a part of th
         // the RETURN of this method is VOID which means this method will NOT return a value
 
         // How to declare a variable
-        int age = 30; // we can also declare multiple variable on the same line
+        // int age = 30; // we can also declare multiple variable on the same line
         // HOWEVER it be NASTY - it would look like [ int age = 30, temp = 20; ] NOT GOOD PRACTICE
-        age = 35; // we can also change what was initially assigned to another value
+        // age = 35; // we can also change what was initially assigned to another value in this case 35
         // int means INTEGER - we NEED to say what datatype it is
         // there are several types not just int - in this case we can ONLY use whole integers
         // age is the name(or label, ALSO called IDENTIFIER) we gave to the variable
         // then the value of the name which is 30
 
+        // we don't need four bytes of memory to save someone's age - one byte will do
+        byte age = 30;
+        // lets say we want to store how many times a youtube video has been watched
+        int viewsCount = 123_456_789; // in JAVA we can use an underscore to seperate every three
+        long viewCount = 1232_122_23213_0L; // To save large integers we NEED to put an L (lower or CAPITAL)
+        double price2 = 10.99; // To save decimal integers - NOTE: you can also use float however
+        float price = 10.99F; // When using FLOATS you MUST put an F at the end of the # (lower or CAPITAL)
+        char letter = 'A'; // NOTE: For SINGLE Characters SINGLE QUOTES for more Characters use ""
+        boolean isEligible = false; // Boolean is true or false
 
         System.out.println(age);
         // this is how we can make the terminal give out this comment
