@@ -93,8 +93,18 @@ public class Main { // this is a Class with the name of Main - also a part of th
 
         // Multi-Dimensional Arrays <----------------------
         // 2D Array to store a matrix OR 3D Array to store data for cube
-        int[][] dArray = new int[5]; // this is for TWO DIMENSIONAL ARRAYS
+        int[][] dArray = new int[2][3]; // this is for TWO DIMENSIONAL ARRAYS - for 3 use 3 BRACKETS
         // 2 by 3 matrix so 2 ROWS and 3 COLUMNS
+        // To access INDIVIDUAL items in the array you NEED to supply TWO INDEXES
+        dArray[0][0] = 1; // first index is the row then the first column and initializing it as 1
+        System.out.println(Arrays.toString(dArray)); // use .toString() from Arrays Class to make it readable
+        // Wait its not readable it returned => [[I@87aac27, [I@3e3abc88]
+        System.out.println(Arrays.deepToString(dArray)); // when dealing with Dimensional Arrays we have to go DEEPER!
+        // Our result looks like => [ [1, 0, 0], [0, 0, 0] ] NOTE: 2 ROWS and 3 COLUMNS
+        // Below we will improve and make it BETTER!!
 
+        int[][] dArrayBetter = {{ 1,2,3 },{ 4,5,6 }}; // // BETTER WAY <---------------------
+        // NOTE: This is also 2 ROWS with 3 COLUMNS
+        System.out.println(Arrays.deepToString(dArrayBetter)); // result => [[1, 2, 3], [4, 5, 6]]
     };
 };
