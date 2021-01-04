@@ -37,8 +37,18 @@ public class Main { // this is a Class with the name of Main - also a part of th
         x = 2;
         System.out.println(y); // Note: This will NOT change the value of y - in Java x and y are DIFFERENT!
 
+        // Remember References in JavaScript - VERY SIMILAR
         // Here we are using the Point class that is defined in this package
         Point point1 = new Point(1,1); // creating values for x and y
+        Point point2 = point1;
+        // point1 and point2 are referencing the same object in memory
+        point1.x = 2; // this should have changed point2
+        System.out.println(point2); // this shows that x = 2
+
+        String message = "Hello World" +  "!!"; // this is the shorthand instead of writing [ new String(original: "Hello World") ]
+        message.endsWith("!!"); // by putting a dot we can use multiple methods that Java has thru packages
+        // the above method returns either true or false - in this case true!
+        System.out.println(message.length());// will return the length of string (13)
 
         System.out.println(age);
         // this is how we can make the terminal give out this comment
