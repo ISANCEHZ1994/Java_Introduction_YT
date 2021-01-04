@@ -1,6 +1,7 @@
 package com.codewithisrael;
 
 import java.awt.*;
+import java.util.Arrays;
 import java.util.Date;
 
 public class Main { // this is a Class with the name of Main - also a part of the package ABOVE
@@ -11,7 +12,7 @@ public class Main { // this is a Class with the name of Main - also a part of th
         // the RETURN of this method is VOID which means this method will NOT return a value
 
         // How to declare a variable
-        // int age = 30; // we can also declare multiple variable on the same line
+        // int age = 30; // we can also declare multiple variable on the same line - in this case INTEGERS (int)
         // HOWEVER it be NASTY - it would look like [ int age = 30, temp = 20; ] NOT GOOD PRACTICE
         // age = 35; // we can also change what was initially assigned to another value in this case 35
         // int means INTEGER - we NEED to say what datatype it is
@@ -53,5 +54,26 @@ public class Main { // this is a Class with the name of Main - also a part of th
         System.out.println(age);
         // this is how we can make the terminal give out this comment
         // The tool system for INTELLIJ really helps with Java - Note to self: Try to remember,to not be so reliant
+
+        // How to work with ARRAYS
+        // Here we a have an INTEGER variable called NUMBERS that is an ARRAY
+        int[] numbers = new int[5]; // Since ARRAYS are REFERENCE TYPES we NEED to use the NEW operator
+        // we repeat the type so int[] then inside we SPECIFY the size/length of the array - How many items??
+        numbers[0] = 1; // here we are referencing the first item in the array and setting it to 1
+        numbers[1] =2;
+
+        // numbers[10] = 3; // this will return an EXCEPTION - Java's way to report errors
+        // We don't have a length of 10 so its not valid
+
+        System.out.println(numbers); // Strange - printing numbers by itself returns => [I@1218025c
+        // By default when printing an array Java returns a string which is calculated
+        // based on the address of this object in MEMORY
+        // In Java we have a class called ARRAY that in defined in the package java.util
+        // (at top) => import java.util.Arrays;
+        System.out.println(Arrays.toString( numbers));
+        // here it returns the array how we want to see it however since only two numbers were assigned
+        // it only shows [1, 2, 0, 0, 0] again by default
+
+
     };
 };
