@@ -11,7 +11,7 @@ public class Main { // this is a Class with the name of Main - also a part of th
         // NOTE: the main/core method in your program should ALWAYS be called STATIC
         // the RETURN of this method is VOID which means this method will NOT return a value
 
-        // How to declare a variable
+        // How to declare a variable <---------------------------------
         // int age = 30; // we can also declare multiple variable on the same line - in this case INTEGERS (int)
         // HOWEVER it be NASTY - it would look like [ int age = 30, temp = 20; ] NOT GOOD PRACTICE
         // age = 35; // we can also change what was initially assigned to another value in this case 35
@@ -21,15 +21,22 @@ public class Main { // this is a Class with the name of Main - also a part of th
         // then the value of the name which is 30
 
         // we don't need four bytes of memory to save someone's age - one byte will do
+        // Note: int uses four bytes of memory (duh) => reference your notebook for more byte information
         byte age = 30;
         // lets say we want to store how many times a youtube video has been watched
         int viewsCount = 123_456_789; // in JAVA we can use an underscore to separate every three
         long viewCount = 1232_122_23213_0L; // To save large integers we NEED to put an L (lower or CAPITAL)
         double price2 = 10.99; // To save decimal integers - NOTE: you can also use float however
         float price = 10.99F; // When using FLOATS you MUST put an F at the end of the # (lower or CAPITAL)
-        char letter = 'A'; // NOTE: For SINGLE Characters SINGLE QUOTES for more Characters use ""
+        char letter = 'A'; // NOTE: For SINGLE Characters use SINGLE QUOTES for more Characters use ""
+        // Use String - represents a series of characters (char)
+        String letters = "Here is multiple char words and stuff whatever Im learning";
+        // How to print out with quotes (ESCAPE Elements)
+        String doubleQuotes =  "\"Here is multiple char - words and stuff whatever Im learning\"";
         boolean isEligible = false; // Boolean is true or false
 
+        System.out.println(letters); // prints the long string
+        System.out.println(doubleQuotes); // we got quotes on the string!
         // Date now = new Date();
         // System.out.println(now);
 
@@ -38,6 +45,7 @@ public class Main { // this is a Class with the name of Main - also a part of th
         x = 2;
         System.out.println(y); // Note: This will NOT change the value of y - in Java x and y are DIFFERENT!
 
+        // How to use POINT <------------------------------------
         // Remember References in JavaScript - VERY SIMILAR
         // Here we are using the Point class that is defined in this package
         Point point1 = new Point(1,1); // creating values for x and y
@@ -55,9 +63,10 @@ public class Main { // this is a Class with the name of Main - also a part of th
         // this is how we can make the terminal give out this comment
         // The tool system for INTELLIJ really helps with Java - Note to self: Try to remember,to not be so reliant
 
-        // How to work with ARRAYS
+        // How to work with ARRAYS <--------------------------
         // Here we a have an INTEGER variable called NUMBERS that is an ARRAY
         int[] numbers = new int[5]; // Since ARRAYS are REFERENCE TYPES we NEED to use the NEW operator
+        // Note we can replace int with float or whatever datatype we would need for that array
         // we repeat the type so int[] then inside we SPECIFY the size/length of the array - How many items??
         numbers[0] = 1; // here we are referencing the first item in the array and setting it to 1
         numbers[1] =2;
@@ -73,7 +82,19 @@ public class Main { // this is a Class with the name of Main - also a part of th
         System.out.println(Arrays.toString( numbers));
         // here it returns the array how we want to see it however since only two numbers were assigned
         // it only shows [1, 2, 0, 0, 0] again by default
+        // THIS WOULD BE ANNOYING - why would you write down everything specificly?
+        // lets do it another NEWER WAY!!
+        int[] numbersNew = { 1,2,5,4,58 }; // BETTER WAY <------------------------
+        Arrays.sort(numbersNew); // this is how to sort the numbers
+        System.out.println(Arrays.toString(numbersNew)); // returns sorted numbers Array
+        System.out.println(numbers.length); // This returns length => 5
+        // In Java arrays have a FIXED SIZE once created we CANNOT ADD OR REMOVE items
+        // There IS a way to do that but will show later! (Collection Classes!)
 
+        // Multi-Dimensional Arrays <----------------------
+        // 2D Array to store a matrix OR 3D Array to store data for cube
+        int[][] dArray = new int[5]; // this is for TWO DIMENSIONAL ARRAYS
+        // 2 by 3 matrix so 2 ROWS and 3 COLUMNS
 
     };
 };
