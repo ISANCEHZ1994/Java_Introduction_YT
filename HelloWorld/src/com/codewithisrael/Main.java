@@ -103,8 +103,17 @@ public class Main { // this is a Class with the name of Main - also a part of th
         // Our result looks like => [ [1, 0, 0], [0, 0, 0] ] NOTE: 2 ROWS and 3 COLUMNS
         // Below we will improve and make it BETTER!!
 
-        int[][] dArrayBetter = {{ 1,2,3 },{ 4,5,6 }}; // // BETTER WAY <---------------------
+        int[][] dArrayBetter = {{ 1,2,3 },{ 4,5,6 }}; // BETTER WAY <---------------------
         // NOTE: This is also 2 ROWS with 3 COLUMNS
         System.out.println(Arrays.deepToString(dArrayBetter)); // result => [[1, 2, 3], [4, 5, 6]]
+
+        // CONSTANTS <------------------------------------
+//      float pi = 3.14F; // Note: Remember the F or by default it will just be a decimal
+//      pi = 1; // If we make pi => 1 then all calculations with(original) pi will be wrong
+        final float PI = 3.14F; // with final - Java will treat pi as a Constant
+        // Meaning that we cannot change it's value later on!
+        // By convention we name ALL CONSTANTS IN CAPITAL LETTERS
+
+
     };
 };
