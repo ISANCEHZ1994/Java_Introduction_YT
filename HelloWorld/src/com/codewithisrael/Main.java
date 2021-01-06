@@ -84,14 +84,14 @@ public class Main { // this is a Class with the name of Main - also a part of th
         // it only shows [1, 2, 0, 0, 0] again by default
         // THIS WOULD BE ANNOYING - why would you write down everything specificly?
         // lets do it another NEWER WAY!!
-        int[] numbersNew = { 1,2,5,4,58 }; // BETTER WAY <------------------------
+        int[] numbersNew = { 1,2,5,4,58 }; // BETTER WAY <-------------------------------------
         Arrays.sort(numbersNew); // this is how to sort the numbers
         System.out.println(Arrays.toString(numbersNew)); // returns sorted numbers Array
         System.out.println(numbers.length); // This returns length => 5
         // In Java arrays have a FIXED SIZE once created we CANNOT ADD OR REMOVE items
         // There IS a way to do that but will show later! (Collection Classes!)
 
-        // Multi-Dimensional Arrays <----------------------
+        // Multi-Dimensional Arrays <-----------------------------------------
         // 2D Array to store a matrix OR 3D Array to store data for cube
         int[][] dArray = new int[2][3]; // this is for TWO DIMENSIONAL ARRAYS - for 3 use 3 BRACKETS
         // 2 by 3 matrix so 2 ROWS and 3 COLUMNS
@@ -103,7 +103,7 @@ public class Main { // this is a Class with the name of Main - also a part of th
         // Our result looks like => [ [1, 0, 0], [0, 0, 0] ] NOTE: 2 ROWS and 3 COLUMNS
         // Below we will improve and make it BETTER!!
 
-        int[][] dArrayBetter = {{ 1,2,3 },{ 4,5,6 }}; // BETTER WAY <---------------------
+        int[][] dArrayBetter = {{ 1,2,3 },{ 4,5,6 }}; // BETTER WAY <--------------------------------------
         // NOTE: This is also 2 ROWS with 3 COLUMNS
         System.out.println(Arrays.deepToString(dArrayBetter)); // result => [[1, 2, 3], [4, 5, 6]]
 
@@ -113,6 +113,18 @@ public class Main { // this is a Class with the name of Main - also a part of th
         final float PI = 3.14F; // with final - Java will treat pi as a Constant
         // Meaning that we cannot change it's value later on!
         // By convention we name ALL CONSTANTS IN CAPITAL LETTERS
+
+        // ARITHMETIC EXPRESSIONS <-------------------------------------------------
+//        int result = 10 + 3; // straightforward adds together to make 13
+        // same for subtraction, multiplication - simple and does what it does
+        // For division (/) it's different - in Java if numbers were divided (10/3) then Java would
+        // Return a whole number - in JAVA since it's the division of two WHOLE numbers
+        // then the result will be a WHOLE NUMBER - below is how to fix
+        double result = (double) 10/ (double) 3; // we have to declare that its a double for it to return our result correctly
+        // Note: we now have to CHANGE int because the result is NOT a whole number
+        int a = 1; // increase the value of a by 1
+        a++; // BEHOLD the increment operator coming back AGAIN! returns => 2
+
 
 
     };
