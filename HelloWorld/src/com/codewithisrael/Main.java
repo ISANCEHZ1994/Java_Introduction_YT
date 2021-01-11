@@ -79,7 +79,7 @@ public class Main { // this is a Class with the name of Main - also a part of th
         // based on the address of this object in MEMORY
         // In Java we have a class called ARRAY that in defined in the package java.util
         // (at top) => import java.util.Arrays;
-        System.out.println(Arrays.toString( numbers));
+         System.out.println(Arrays.toString( numbers));
         // here it returns the array how we want to see it however since only two numbers were assigned
         // it only shows [1, 2, 0, 0, 0] again by default
         // THIS WOULD BE ANNOYING - why would you write down everything specificly?
@@ -115,17 +115,46 @@ public class Main { // this is a Class with the name of Main - also a part of th
         // By convention we name ALL CONSTANTS IN CAPITAL LETTERS
 
         // ARITHMETIC EXPRESSIONS <-------------------------------------------------
+        // arithmetic express: [ +, -, *, /, % ]
 //        int result = 10 + 3; // straightforward adds together to make 13
         // same for subtraction, multiplication - simple and does what it does
         // For division (/) it's different - in Java if numbers were divided (10/3) then Java would
-        // Return a whole number - in JAVA since it's the division of two WHOLE numbers
+        // Return a whole number - in JAVA, since it's the division of two WHOLE numbers
         // then the result will be a WHOLE NUMBER - below is how to fix
-        double result = (double) 10/ (double) 3; // we have to declare that its a double for it to return our result correctly
+        double result = (double) 10/ (double) 3; // we have to declare that its a double
+        // for it to return our result correctly
         // Note: we now have to CHANGE int because the result is NOT a whole number
         int a = 1; // increase the value of a by 1
-        a++; // BEHOLD the increment operator coming back AGAIN! returns => 2
+        a++; // BEHOLD the increment operator coming back AGAIN! returns => 2 - this version of operator is a POSTFIX
+        // ++a is the PREFIX of the operator - which give the same result HOWEVER eventually it will give a different result
+        // example: int x = 1;
+        //          int y = ++x;
+        //  when you print out both - the values will both be 2 (x:2, y:2) instead of x:1 and y:2 like how you want (POSTFIX)
 
+        // COMPOUND/AUGMENTED ASSIGNMENT OPERATOR <------------------------------------------
+        // instead of writing   x = 1;  x = x + 2; => result 3
+        // we can shortend the second part with  x = 1;  x += 2; => result 3
+        // the operators can also be used with [ -, *, / ]
 
+        // ORDER OF OPERATIONS <---------------------------------------------------
+        // int x = 10 + 3 * 2; in this case 3 times 2 is evaluated first
+        // so the end result is 16
+        // if you want something done FIRST then put it in () => (10 + 3) * 2 => 26
+        // PRIORITY:
+        // ()
+        // */
+        // +-
+
+        // CASTING <---------------------------------------------------------------
+        short w = 1; // remember that SHORT has 2 bytes while INTEGER has 4
+        int z = w + 2; // when printed(z) it should result what you think => three
+        // NOTE: we are adding a SHORT to an INTEGER - dealing with two different types of values
+        // one of these values should be converted to the other type
+        // This is also known as IMPLICIT CASTING - automatic conversion something we don't have to worry about
+        // Big data can be converted to small so byte > short > int > long
+        double wNew = 1.1;
+        double zNew = wNew + 2; // Yes 2 is a whole number however since we wrote double Java reads it as 2.0 <---------
+        // when we print this out it returns => 3.1
 
     };
 };
