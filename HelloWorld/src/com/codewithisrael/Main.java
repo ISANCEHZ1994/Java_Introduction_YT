@@ -4,6 +4,7 @@ import java.awt.*;
 import java.text.NumberFormat;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.Scanner;
 
 public class Main { // this is a Class with the name of Main - also a part of the package ABOVE
 
@@ -199,7 +200,21 @@ public class Main { // this is a Class with the name of Main - also a part of th
         // if we change NumberFormat.getPercentInstance() with the string changed to .format(number: 0.1)
         // value => 10%
         // NOTE: if you press SHIFT F6 then you can refactor variable names faster
-        //
+
+        // READING INPUT <-----------------------------------------------------
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Age: "); // .printIn() creates a new line in console and it looks funny - this makes it look better
+        byte age1 = scanner.nextByte(); // NOTE: there is a lot of methods of .next => .nextLong(), .nextBigInteger(), .nextDouble()
+        System.out.println("You are " + age1); // when running it waits for input from user once number is entered
+        // Age: 20 => You are 20 <-- RESULT
+        // THIS CANNOT ACCEPT FLOATS (20.1) because it can only parse byte values
+        // this is why there are multiple methods like .nextFloat(); or .nextDouble();
+        // NOTE: .nextString() DOES NOT EXIST so just use .next()
+        // if we want it to read a full name like "Israel Sanchez" - known as two TOKENS
+        // we just use .nextLine(); for full name acceptance!
+        // use .trim() to get rid of extra spaces so it would look like scanner.nextLine().trim();
+
+
 
 
 
