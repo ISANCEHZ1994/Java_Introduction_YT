@@ -1,6 +1,7 @@
 package com.codewithisrael;
 
 import java.awt.*;
+import java.text.NumberFormat;
 import java.util.Arrays;
 import java.util.Date;
 
@@ -169,6 +170,38 @@ public class Main { // this is a Class with the name of Main - also a part of th
         // when printing y - it returns => an ERROR or an EXCEPTION
         // correct variable y by replacing integer to double
         // double y = Double.parseDouble(x) + 2; result should be => 3.1
+
+        // MATH CLASS <---------------------------------------------------
+        int round =  Math.round(1.1F);
+        System.out.println(round); // returns 1 - which is a LONG
+        // Math.ceil returns the smallest integer greater than or equal to passing number
+        // result would be => 2 HOWEVER it would be a compilation error because
+        // .ceil returns a DOUBLE and we are storing in INTEGER (MASSIVE NONO)
+        // to correct => int round =  (int)Math.ceil(1.1F); returns => 2
+        // int round =  (int)Math.floor(1.1F)
+        // .floor is the largest integer that is smaller or equal to the passing number - returns => 1
+        // Math.max() - returns the greatest of two values - Math.max(1,2); => returns 2 the greatest number
+        // similar to Math.min()
+        // Math.random() - generates a random value between 0 and 1 NOTE: random() returns a double
+        // So it would be double round = Math.random(); NOT INT - returns => any double/float number between 0 and 1
+        // double round = Math.round(Math.random() * 100); returns any number from 1 to 100 in this from 99.0, 23.0, 68.0
+        // int round = (int) Math.round(Math.random() * 100); for numbers to appear 78, 45, 23, 83
+        // int round = (int) (Math.random() * 100); same as above => 53, 26, 38, 84
+
+        // FORMATTING NUMBERS <-------------------------------------------
+        // how to change 1234567 => $1,234,567
+        // or 0.1 => 10%
+        // NumberFormat currency = new NumberFormat(); // NumberFormat' is abstract; cannot be instantiated
+        NumberFormat currency = NumberFormat.getCurrencyInstance(); // storing in variable called currency
+        String value = currency.format(1234567.891); // using .format() for double
+        // storing in a string value
+        // when printed we get => $ 1,234,567.89;
+        // if we change NumberFormat.getPercentInstance() with the string changed to .format(number: 0.1)
+        // value => 10%
+        // NOTE: if you press SHIFT F6 then you can refactor variable names faster
+        //
+
+
 
     };
 };
