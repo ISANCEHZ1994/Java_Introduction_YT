@@ -150,11 +150,19 @@ public class Main { // this is a Class with the name of Main - also a part of th
         int z = w + 2; // when printed(z) it should result what you think => three
         // NOTE: we are adding a SHORT to an INTEGER - dealing with two different types of values
         // one of these values should be converted to the other type
-        // This is also known as IMPLICIT CASTING - automatic conversion something we don't have to worry about
+        // This is also known as IMPLICIT CASTING - automatic conversion, something we don't have to worry about
         // Big data can be converted to small so byte > short > int > long
         double wNew = 1.1;
-        double zNew = wNew + 2; // Yes 2 is a whole number however since we wrote double Java reads it as 2.0 <---------
+        double zNew = wNew + 2; // Yes 2 is a whole number however since we wrote/assigned as double Java reads it as 2.0
         // when we print this out it returns => 3.1
+        // EXPLICITLY CAST the result
+        // double x = 1.1;
+        // int y = (int)x + 2; we CAST x to an integer
+        // we convert x to an integer so the result would be 1(whole number) without a decimal point
+        // when printed out y will be 3
+
+        // .parseInt() - takes a string and returns an integer
+
 
     };
 };
