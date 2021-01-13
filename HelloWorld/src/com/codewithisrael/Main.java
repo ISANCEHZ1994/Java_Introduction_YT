@@ -161,8 +161,14 @@ public class Main { // this is a Class with the name of Main - also a part of th
         // we convert x to an integer so the result would be 1(whole number) without a decimal point
         // when printed out y will be 3
 
-        // .parseInt() - takes a string and returns an integer
-
+        // Integer.parseInt() - takes a string and returns an integer
+        // Short.parseShort() - takes a string and returns a short
+        // Same for FLOAT and DOUBLE
+        // What if x is a floating point number?
+        // String x = "1.1"; int y = Integer.parseInt(x) + 2;
+        // when printing y - it returns => an ERROR or an EXCEPTION
+        // correct variable y by replacing integer to double
+        // double y = Double.parseDouble(x) + 2; result should be => 3.1
 
     };
 };
